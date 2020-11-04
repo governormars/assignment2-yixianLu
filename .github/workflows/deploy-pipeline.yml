@@ -1,0 +1,24 @@
+name: Deployment Pipeline
+on:
+  push:
+    branches:
+      - master         # Push events on master branch
+
+jobs:
+  build:
+    name: Output Online to Surge
+    runs-on: self-hosted
+    container: kalvin1234/myers-triangle
+    steps:
+      - name: Pull Repository
+        uses: actions/checkout@v2
+      - name: Install Requirements
+        run: pip3 install -r requirements.txt
+      - name: Create dist/index.html
+        run: mkdir -p dist && { flake8 & pytest -v; } | /t2h/terminal-to-html -preview > dist/index.html
+      - name: Push to surge
+        env:
+          SURGE_TOKEN: ${{ secrets.surge }}
+          SURGE_LOGIN: ${{ secrets.surge_login }}
+        run: surge --project ./dist --domain $GITHUB_ACTOR-c401-winter-2020.surge.sh
+
