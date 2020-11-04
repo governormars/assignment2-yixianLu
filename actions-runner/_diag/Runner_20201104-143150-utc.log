@@ -1,0 +1,165 @@
+[2020-11-04 14:31:50Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-04 14:31:50Z INFO HostContext] Well known config file 'Credentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials'
+[2020-11-04 14:31:50Z INFO Listener] Runner is built for Linux (X64) - linux-x64.
+[2020-11-04 14:31:50Z INFO Listener] RuntimeInformation: Linux 4.15.0-118-generic #119-Ubuntu SMP Tue Sep 8 12:30:01 UTC 2020.
+[2020-11-04 14:31:50Z INFO Listener] Version: 2.273.6
+[2020-11-04 14:31:50Z INFO Listener] Commit: ad745669526010737d2ac2dcd10de80732e8390d
+[2020-11-04 14:31:50Z INFO Listener] Culture: 
+[2020-11-04 14:31:50Z INFO Listener] UI Culture: 
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-04 14:31:50Z INFO Listener] Validating directory permissions for: '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-04 14:31:50Z INFO CommandLineParser] Parse
+[2020-11-04 14:31:50Z INFO CommandLineParser] Parsing 1 args
+[2020-11-04 14:31:50Z INFO CommandLineParser] parsing argument
+[2020-11-04 14:31:50Z INFO CommandLineParser] HasArgs: False
+[2020-11-04 14:31:50Z INFO CommandLineParser] Adding Command: run
+[2020-11-04 14:31:50Z INFO Listener] Arguments parsed
+[2020-11-04 14:31:50Z INFO Runner] ExecuteCommand
+[2020-11-04 14:31:50Z INFO ConfigurationStore] currentAssemblyLocation: /home/ubuntu/assignment2-yixianLu/actions-runner/bin/Runner.Listener.dll
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-04 14:31:50Z INFO ConfigurationStore] binPath: /home/ubuntu/assignment2-yixianLu/actions-runner/bin
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-04 14:31:50Z INFO ConfigurationStore] RootFolder: /home/ubuntu/assignment2-yixianLu/actions-runner
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-04 14:31:50Z INFO HostContext] Well known config file 'Runner': '/home/ubuntu/assignment2-yixianLu/actions-runner/.runner'
+[2020-11-04 14:31:50Z INFO ConfigurationStore] ConfigFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.runner
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-04 14:31:50Z INFO HostContext] Well known config file 'Credentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials'
+[2020-11-04 14:31:50Z INFO ConfigurationStore] CredFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-04 14:31:50Z INFO HostContext] Well known config file 'MigratedCredentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_migrated'
+[2020-11-04 14:31:50Z INFO ConfigurationStore] MigratedCredFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_migrated
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-04 14:31:50Z INFO HostContext] Well known config file 'Service': '/home/ubuntu/assignment2-yixianLu/actions-runner/.service'
+[2020-11-04 14:31:50Z INFO ConfigurationStore] ServiceConfigFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.service
+[2020-11-04 14:31:50Z INFO CommandSettings] Flag 'help': 'False'
+[2020-11-04 14:31:50Z INFO CommandSettings] Flag 'version': 'False'
+[2020-11-04 14:31:50Z INFO CommandSettings] Flag 'commit': 'False'
+[2020-11-04 14:31:50Z INFO CommandSettings] Command 'configure': 'False'
+[2020-11-04 14:31:50Z INFO CommandSettings] Command 'remove': 'False'
+[2020-11-04 14:31:50Z INFO CommandSettings] Command 'warmup': 'False'
+[2020-11-04 14:31:50Z INFO ConfigurationManager] LoadSettings
+[2020-11-04 14:31:50Z INFO ConfigurationStore] IsConfigured()
+[2020-11-04 14:31:50Z INFO ConfigurationStore] IsConfigured: True
+[2020-11-04 14:31:50Z INFO ConfigurationManager] Is configured: True
+[2020-11-04 14:31:50Z INFO ConfigurationStore] Read setting file: 319 chars
+[2020-11-04 14:31:50Z INFO ConfigurationManager] Settings Loaded
+[2020-11-04 14:31:50Z INFO ConfigurationStore] IsServiceConfigured()
+[2020-11-04 14:31:50Z INFO ConfigurationStore] IsServiceConfigured: False
+[2020-11-04 14:31:50Z INFO CommandSettings] Command 'run': 'True'
+[2020-11-04 14:31:50Z INFO ConfigurationStore] IsConfigured()
+[2020-11-04 14:31:50Z INFO ConfigurationStore] IsConfigured: True
+[2020-11-04 14:31:50Z INFO ConfigurationManager] Is configured: True
+[2020-11-04 14:31:50Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2020-11-04 14:31:50Z INFO Runner] Set runner startup type - Manual
+[2020-11-04 14:31:50Z INFO CommandSettings] Flag 'once': 'False'
+[2020-11-04 14:31:50Z INFO Runner] RunAsync
+[2020-11-04 14:31:50Z INFO ConfigurationManager] LoadSettings
+[2020-11-04 14:31:50Z INFO ConfigurationStore] IsConfigured()
+[2020-11-04 14:31:50Z INFO ConfigurationStore] IsConfigured: True
+[2020-11-04 14:31:50Z INFO ConfigurationManager] Is configured: True
+[2020-11-04 14:31:50Z INFO ConfigurationManager] Settings Loaded
+[2020-11-04 14:31:50Z INFO MessageListener] {
+  "AgentId": 2,
+  "AgentName": "cmput401-assignment2_yxl",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelines.actions.githubusercontent.com/SlfxfpiHaA8t9bO3tik5wAhm7FVPtFt8fHahD0YDOzro3EeyeD",
+  "GitHubUrl": "https://github.com/UAlberta-CMPUT401/assignment2-yixianLu",
+  "WorkFolder": "_work"
+}
+[2020-11-04 14:31:50Z INFO MessageListener] Loading Credentials
+[2020-11-04 14:31:50Z INFO ConfigurationStore] HasCredentials()
+[2020-11-04 14:31:50Z INFO ConfigurationStore] stored True
+[2020-11-04 14:31:50Z INFO CredentialManager] GetCredentialProvider
+[2020-11-04 14:31:50Z INFO CredentialManager] Creating type OAuth
+[2020-11-04 14:31:50Z INFO CredentialManager] Creating credential type: OAuth
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-04 14:31:50Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-04 14:31:50Z INFO HostContext] Well known config file 'RSACredentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams'
+[2020-11-04 14:31:50Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams
+[2020-11-04 14:31:50Z INFO MessageListener] Attempt to create session.
+[2020-11-04 14:31:50Z INFO MessageListener] Connecting to the Runner Server...
+[2020-11-04 14:31:50Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2020-11-04 14:31:50Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-04 14:31:50Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2020-11-04 14:31:50Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-04 14:31:50Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2020-11-04 14:31:50Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-04 14:31:51Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-04 14:31:51Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-04 14:31:51Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-04 14:31:51Z INFO MessageListener] VssConnection created
+[2020-11-04 14:31:51Z INFO Terminal] WRITE LINE: 
+[2020-11-04 14:31:51Z INFO Terminal] WRITE LINE: 
+[2020-11-04 14:31:51Z WARN GitHubActionsService] Authentication failed with status code 401.
+Transfer-Encoding: chunked
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: 15de15b8-986c-4ea6-8fd4-7c56b9aadaf9
+ActivityId: d94bd62f-05d4-4184-9f09-24271e4d1ff0
+X-TFS-Session: ea4e0357-66a3-4a43-847b-10bbe9d59358
+X-VSS-E2EID: 7c85d07a-3a2f-4304-babb-4cf4f13a717d
+X-VSS-SenderDeploymentId: 13a19993-c6bc-326c-afb4-32c5519f46f0
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: 5943D9C8948B493AB5B0A23A0EEE2261 Ref B: WSTEDGE0608 Ref C: 2020-11-04T14:31:51Z
+Date: Wed, 04 Nov 2020 14:31:51 GMT
+
+[2020-11-04 14:31:51Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams
+[2020-11-04 14:31:51Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams
+[2020-11-04 14:31:52Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-11-04 14:31:52Z INFO MessageListener] Session created.
+[2020-11-04 14:31:52Z INFO Terminal] WRITE LINE: 2020-11-04 14:31:52Z: Listening for Jobs
+[2020-11-04 14:31:52Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2020-11-04 14:31:56Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams
+[2020-11-04 14:31:56Z INFO MessageListener] Message '1' received from session '5c707cbb-8449-4099-9279-380fb0b4936e'.
+[2020-11-04 14:31:56Z INFO JobDispatcher] Job request 1 for plan 8c16012c-a568-43c2-9b3c-e758808be0b7 job ca395085-040a-526b-2ce8-bdc85f692774 received.
+[2020-11-04 14:31:56Z INFO JobDispatcher] Pull OrchestrationId 8c16012c-a568-43c2-9b3c-e758808be0b7.build.__default from JWT claims
+[2020-11-04 14:31:56Z INFO Terminal] WRITE LINE: 2020-11-04 14:31:56Z: Running job: Pytest & Flake8
+[2020-11-04 14:31:56Z INFO JobDispatcher] Start renew job request 1 for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2020-11-04 14:31:56Z INFO JobDispatcher] Successfully renew job request 1, job is valid till 11/04/2020 14:41:56
+[2020-11-04 14:31:56Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-04 14:31:56Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-04 14:31:56Z INFO ProcessInvokerWrapper]   File name: '/home/ubuntu/assignment2-yixianLu/actions-runner/bin/Runner.Worker'
+[2020-11-04 14:31:56Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 100 103'
+[2020-11-04 14:31:56Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-04 14:31:56Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-04 14:31:56Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-04 14:31:56Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2020-11-04 14:31:56Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-04 14:31:56Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-04 14:31:56Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-04 14:31:56Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2020-11-04 14:31:56Z INFO ProcessInvokerWrapper] Process started with process id 21913, waiting for process exit.
+[2020-11-04 14:31:56Z INFO JobDispatcher] Send job request message to worker for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2020-11-04 14:31:56Z INFO JobNotification] Entering JobStarted Notification
+[2020-11-04 14:31:56Z INFO JobNotification] Entering StartMonitor
+[2020-11-04 14:32:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-04 14:32:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-04 14:32:04Z INFO ProcessInvokerWrapper] Finished process 21913 with exit code 102, and elapsed time 00:00:08.5303512.
+[2020-11-04 14:32:04Z INFO JobDispatcher] Worker finished for job ca395085-040a-526b-2ce8-bdc85f692774. Code: 102
+[2020-11-04 14:32:04Z INFO JobDispatcher] finish job request for job ca395085-040a-526b-2ce8-bdc85f692774 with result: Failed
+[2020-11-04 14:32:04Z INFO Terminal] WRITE LINE: 2020-11-04 14:32:04Z: Job Pytest & Flake8 completed with result: Failed
+[2020-11-04 14:32:04Z INFO JobDispatcher] Stop renew job request for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2020-11-04 14:32:04Z INFO JobDispatcher] job renew has been canceled, stop renew job request 1.
+[2020-11-04 14:32:04Z INFO JobNotification] Entering JobCompleted Notification
+[2020-11-04 14:32:04Z INFO JobNotification] Entering EndMonitor
+[2020-11-04 14:43:29Z INFO Terminal] WRITE LINE: Exiting...
+[2020-11-04 14:43:29Z INFO ConfigurationStore] IsServiceConfigured()
+[2020-11-04 14:43:29Z INFO ConfigurationStore] IsServiceConfigured: False
+[2020-11-04 14:43:29Z INFO HostContext] Runner will be shutdown for UserCancelled
+[2020-11-04 14:43:29Z WARN GitHubActionsService] GET request to https://pipelines.actions.githubusercontent.com/SlfxfpiHaA8t9bO3tik5wAhm7FVPtFt8fHahD0YDOzro3EeyeD/_apis/distributedtask/pools/1/messages?sessionId=5c707cbb-8449-4099-9279-380fb0b4936e&lastMessageId=1 has been cancelled.
+[2020-11-04 14:43:29Z INFO MessageListener] Get next message has been cancelled.
+[2020-11-04 14:43:29Z INFO JobDispatcher] Shutting down JobDispatcher. Make sure all WorkerDispatcher has finished.
+[2020-11-04 14:43:29Z INFO JobDispatcher] Ensure WorkerDispather for job ca395085-040a-526b-2ce8-bdc85f692774 run to finish, cancel any running job.
+[2020-11-04 14:43:29Z INFO JobDispatcher] Job request ca395085-040a-526b-2ce8-bdc85f692774 processed succeed.
+[2020-11-04 14:43:30Z INFO Listener] Runner execution been cancelled.
