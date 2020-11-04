@@ -1,0 +1,10 @@
+For 401 result:
+
+Hit the search button on ualberta.ca/computing-science
+Search for CMPUT 401
+Confirm that search results exist
+
+For the empty result:
+
+Search for "TUPMC"
+Confirm that no results are returned
