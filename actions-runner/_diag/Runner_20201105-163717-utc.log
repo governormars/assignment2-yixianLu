@@ -1,0 +1,236 @@
+[2020-11-05 16:37:17Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:37:17Z INFO HostContext] Well known config file 'Credentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials'
+[2020-11-05 16:37:17Z INFO Listener] Runner is built for Linux (X64) - linux-x64.
+[2020-11-05 16:37:17Z INFO Listener] RuntimeInformation: Linux 4.15.0-118-generic #119-Ubuntu SMP Tue Sep 8 12:30:01 UTC 2020.
+[2020-11-05 16:37:17Z INFO Listener] Version: 2.273.6
+[2020-11-05 16:37:17Z INFO Listener] Commit: ad745669526010737d2ac2dcd10de80732e8390d
+[2020-11-05 16:37:17Z INFO Listener] Culture: 
+[2020-11-05 16:37:17Z INFO Listener] UI Culture: 
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:37:17Z INFO Listener] Validating directory permissions for: '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:37:17Z INFO CommandLineParser] Parse
+[2020-11-05 16:37:17Z INFO CommandLineParser] Parsing 1 args
+[2020-11-05 16:37:17Z INFO CommandLineParser] parsing argument
+[2020-11-05 16:37:17Z INFO CommandLineParser] HasArgs: False
+[2020-11-05 16:37:17Z INFO CommandLineParser] Adding Command: run
+[2020-11-05 16:37:17Z INFO Listener] Arguments parsed
+[2020-11-05 16:37:17Z INFO Runner] ExecuteCommand
+[2020-11-05 16:37:17Z INFO ConfigurationStore] currentAssemblyLocation: /home/ubuntu/assignment2-yixianLu/actions-runner/bin/Runner.Listener.dll
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:37:17Z INFO ConfigurationStore] binPath: /home/ubuntu/assignment2-yixianLu/actions-runner/bin
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:37:17Z INFO ConfigurationStore] RootFolder: /home/ubuntu/assignment2-yixianLu/actions-runner
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:37:17Z INFO HostContext] Well known config file 'Runner': '/home/ubuntu/assignment2-yixianLu/actions-runner/.runner'
+[2020-11-05 16:37:17Z INFO ConfigurationStore] ConfigFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.runner
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:37:17Z INFO HostContext] Well known config file 'Credentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials'
+[2020-11-05 16:37:17Z INFO ConfigurationStore] CredFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:37:17Z INFO HostContext] Well known config file 'MigratedCredentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_migrated'
+[2020-11-05 16:37:17Z INFO ConfigurationStore] MigratedCredFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_migrated
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:37:17Z INFO HostContext] Well known config file 'Service': '/home/ubuntu/assignment2-yixianLu/actions-runner/.service'
+[2020-11-05 16:37:17Z INFO ConfigurationStore] ServiceConfigFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.service
+[2020-11-05 16:37:17Z INFO CommandSettings] Flag 'help': 'False'
+[2020-11-05 16:37:17Z INFO CommandSettings] Flag 'version': 'False'
+[2020-11-05 16:37:17Z INFO CommandSettings] Flag 'commit': 'False'
+[2020-11-05 16:37:17Z INFO CommandSettings] Command 'configure': 'False'
+[2020-11-05 16:37:17Z INFO CommandSettings] Command 'remove': 'False'
+[2020-11-05 16:37:17Z INFO CommandSettings] Command 'warmup': 'False'
+[2020-11-05 16:37:17Z INFO ConfigurationManager] LoadSettings
+[2020-11-05 16:37:17Z INFO ConfigurationStore] IsConfigured()
+[2020-11-05 16:37:17Z INFO ConfigurationStore] IsConfigured: True
+[2020-11-05 16:37:17Z INFO ConfigurationManager] Is configured: True
+[2020-11-05 16:37:17Z INFO ConfigurationStore] Read setting file: 319 chars
+[2020-11-05 16:37:17Z INFO ConfigurationManager] Settings Loaded
+[2020-11-05 16:37:17Z INFO ConfigurationStore] IsServiceConfigured()
+[2020-11-05 16:37:17Z INFO ConfigurationStore] IsServiceConfigured: False
+[2020-11-05 16:37:17Z INFO CommandSettings] Command 'run': 'True'
+[2020-11-05 16:37:17Z INFO ConfigurationStore] IsConfigured()
+[2020-11-05 16:37:17Z INFO ConfigurationStore] IsConfigured: True
+[2020-11-05 16:37:17Z INFO ConfigurationManager] Is configured: True
+[2020-11-05 16:37:17Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2020-11-05 16:37:17Z INFO Runner] Set runner startup type - Manual
+[2020-11-05 16:37:17Z INFO CommandSettings] Flag 'once': 'False'
+[2020-11-05 16:37:17Z INFO Runner] RunAsync
+[2020-11-05 16:37:17Z INFO ConfigurationManager] LoadSettings
+[2020-11-05 16:37:17Z INFO ConfigurationStore] IsConfigured()
+[2020-11-05 16:37:17Z INFO ConfigurationStore] IsConfigured: True
+[2020-11-05 16:37:17Z INFO ConfigurationManager] Is configured: True
+[2020-11-05 16:37:17Z INFO ConfigurationManager] Settings Loaded
+[2020-11-05 16:37:17Z INFO MessageListener] {
+  "AgentId": 2,
+  "AgentName": "cmput401-assignment2_yxl",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelines.actions.githubusercontent.com/SlfxfpiHaA8t9bO3tik5wAhm7FVPtFt8fHahD0YDOzro3EeyeD",
+  "GitHubUrl": "https://github.com/UAlberta-CMPUT401/assignment2-yixianLu",
+  "WorkFolder": "_work"
+}
+[2020-11-05 16:37:17Z INFO MessageListener] Loading Credentials
+[2020-11-05 16:37:17Z INFO ConfigurationStore] HasCredentials()
+[2020-11-05 16:37:17Z INFO ConfigurationStore] stored True
+[2020-11-05 16:37:17Z INFO CredentialManager] GetCredentialProvider
+[2020-11-05 16:37:17Z INFO CredentialManager] Creating type OAuth
+[2020-11-05 16:37:17Z INFO CredentialManager] Creating credential type: OAuth
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:37:17Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:37:17Z INFO HostContext] Well known config file 'RSACredentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams'
+[2020-11-05 16:37:17Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams
+[2020-11-05 16:37:17Z INFO MessageListener] Attempt to create session.
+[2020-11-05 16:37:17Z INFO MessageListener] Connecting to the Runner Server...
+[2020-11-05 16:37:17Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2020-11-05 16:37:17Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-05 16:37:17Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2020-11-05 16:37:17Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-05 16:37:17Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2020-11-05 16:37:17Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-05 16:37:18Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-05 16:37:18Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-05 16:37:18Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-05 16:37:18Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-05 16:37:18Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-05 16:37:18Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-05 16:37:19Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-05 16:37:19Z INFO MessageListener] VssConnection created
+[2020-11-05 16:37:19Z INFO Terminal] WRITE LINE: 
+[2020-11-05 16:37:19Z INFO Terminal] WRITE LINE: 
+[2020-11-05 16:37:19Z WARN GitHubActionsService] Authentication failed with status code 401.
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: 9a8330ca-6770-45be-a989-9e9c22991fe6
+ActivityId: e2f34c18-61b0-4b5b-a44a-1312815e6c2d
+X-TFS-Session: 653041bd-553d-4df9-ab62-758ec2a932dc
+X-VSS-E2EID: b441e18f-3e24-4063-850b-647ed5d0fd62
+X-VSS-SenderDeploymentId: 13a19993-c6bc-326c-afb4-32c5519f46f0
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: AD9DB23770A146E6BDE5A114C962F773 Ref B: WSTEDGE1004 Ref C: 2020-11-05T16:37:19Z
+Date: Thu, 05 Nov 2020 16:37:18 GMT
+
+[2020-11-05 16:37:19Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams
+[2020-11-05 16:37:19Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams
+[2020-11-05 16:37:19Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-11-05 16:37:19Z INFO MessageListener] Session created.
+[2020-11-05 16:37:19Z INFO Terminal] WRITE LINE: 2020-11-05 16:37:19Z: Listening for Jobs
+[2020-11-05 16:37:19Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2020-11-05 16:37:23Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams
+[2020-11-05 16:37:23Z INFO MessageListener] Message '26' received from session '0311cbe3-6f67-448c-ba49-19ec261e3fa3'.
+[2020-11-05 16:37:24Z INFO JobDispatcher] Job request 26 for plan e8645722-935d-4ef1-9ecb-ff1616589175 job ca395085-040a-526b-2ce8-bdc85f692774 received.
+[2020-11-05 16:37:24Z INFO JobDispatcher] Pull OrchestrationId e8645722-935d-4ef1-9ecb-ff1616589175.build.__default from JWT claims
+[2020-11-05 16:37:24Z INFO Terminal] WRITE LINE: 2020-11-05 16:37:24Z: Running job: Pytest & Flake8
+[2020-11-05 16:37:24Z INFO JobDispatcher] Start renew job request 26 for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2020-11-05 16:37:24Z INFO JobDispatcher] Successfully renew job request 26, job is valid till 11/05/2020 16:47:24
+[2020-11-05 16:37:24Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:37:24Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:37:24Z INFO ProcessInvokerWrapper]   File name: '/home/ubuntu/assignment2-yixianLu/actions-runner/bin/Runner.Worker'
+[2020-11-05 16:37:24Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 99 102'
+[2020-11-05 16:37:24Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:37:24Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:37:24Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:37:24Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2020-11-05 16:37:24Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:37:24Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:37:24Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:37:24Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2020-11-05 16:37:24Z INFO ProcessInvokerWrapper] Process started with process id 6328, waiting for process exit.
+[2020-11-05 16:37:24Z INFO JobDispatcher] Send job request message to worker for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2020-11-05 16:37:24Z INFO JobNotification] Entering JobStarted Notification
+[2020-11-05 16:37:24Z INFO JobNotification] Entering StartMonitor
+[2020-11-05 16:37:36Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:37:36Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:37:36Z INFO ProcessInvokerWrapper] Finished process 6328 with exit code 102, and elapsed time 00:00:12.2788402.
+[2020-11-05 16:37:36Z INFO JobDispatcher] Worker finished for job ca395085-040a-526b-2ce8-bdc85f692774. Code: 102
+[2020-11-05 16:37:36Z INFO JobDispatcher] finish job request for job ca395085-040a-526b-2ce8-bdc85f692774 with result: Failed
+[2020-11-05 16:37:36Z INFO Terminal] WRITE LINE: 2020-11-05 16:37:36Z: Job Pytest & Flake8 completed with result: Failed
+[2020-11-05 16:37:36Z INFO JobDispatcher] Stop renew job request for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2020-11-05 16:37:36Z INFO JobDispatcher] job renew has been canceled, stop renew job request 26.
+[2020-11-05 16:37:36Z INFO JobNotification] Entering JobCompleted Notification
+[2020-11-05 16:37:36Z INFO JobNotification] Entering EndMonitor
+[2020-11-05 16:38:03Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams
+[2020-11-05 16:38:03Z INFO MessageListener] Message '27' received from session '0311cbe3-6f67-448c-ba49-19ec261e3fa3'.
+[2020-11-05 16:38:03Z INFO JobDispatcher] Job request 27 for plan 08341e1c-5e37-4917-8440-f0bacd89c26c job ca395085-040a-526b-2ce8-bdc85f692774 received.
+[2020-11-05 16:38:03Z INFO JobDispatcher] Pull OrchestrationId 08341e1c-5e37-4917-8440-f0bacd89c26c.build.__default from JWT claims
+[2020-11-05 16:38:03Z INFO JobDispatcher] Job request ca395085-040a-526b-2ce8-bdc85f692774 processed succeed.
+[2020-11-05 16:38:03Z INFO Terminal] WRITE LINE: 2020-11-05 16:38:03Z: Running job: Pytest & Flake8
+[2020-11-05 16:38:03Z INFO JobDispatcher] Start renew job request 27 for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2020-11-05 16:38:03Z INFO JobDispatcher] Successfully renew job request 27, job is valid till 11/05/2020 16:48:03
+[2020-11-05 16:38:03Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:38:03Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:38:03Z INFO ProcessInvokerWrapper]   File name: '/home/ubuntu/assignment2-yixianLu/actions-runner/bin/Runner.Worker'
+[2020-11-05 16:38:03Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 99 102'
+[2020-11-05 16:38:03Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:38:03Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:38:03Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:38:03Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2020-11-05 16:38:03Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:38:03Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:38:03Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:38:03Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2020-11-05 16:38:03Z INFO ProcessInvokerWrapper] Process started with process id 6898, waiting for process exit.
+[2020-11-05 16:38:03Z INFO JobDispatcher] Send job request message to worker for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2020-11-05 16:38:03Z INFO JobNotification] Entering JobStarted Notification
+[2020-11-05 16:38:03Z INFO JobNotification] Entering StartMonitor
+[2020-11-05 16:38:15Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:38:15Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:38:15Z INFO ProcessInvokerWrapper] Finished process 6898 with exit code 102, and elapsed time 00:00:11.8517521.
+[2020-11-05 16:38:15Z INFO JobDispatcher] Worker finished for job ca395085-040a-526b-2ce8-bdc85f692774. Code: 102
+[2020-11-05 16:38:15Z INFO JobDispatcher] finish job request for job ca395085-040a-526b-2ce8-bdc85f692774 with result: Failed
+[2020-11-05 16:38:15Z INFO Terminal] WRITE LINE: 2020-11-05 16:38:15Z: Job Pytest & Flake8 completed with result: Failed
+[2020-11-05 16:38:15Z INFO JobDispatcher] Stop renew job request for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2020-11-05 16:38:15Z INFO JobDispatcher] job renew has been canceled, stop renew job request 27.
+[2020-11-05 16:38:15Z INFO JobNotification] Entering JobCompleted Notification
+[2020-11-05 16:38:15Z INFO JobNotification] Entering EndMonitor
+[2020-11-05 16:38:26Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams
+[2020-11-05 16:38:26Z INFO MessageListener] Message '28' received from session '0311cbe3-6f67-448c-ba49-19ec261e3fa3'.
+[2020-11-05 16:38:26Z INFO JobDispatcher] Job request 28 for plan 77c00c2f-1a5b-4c34-b1be-da322c14d312 job ca395085-040a-526b-2ce8-bdc85f692774 received.
+[2020-11-05 16:38:26Z INFO JobDispatcher] Pull OrchestrationId 77c00c2f-1a5b-4c34-b1be-da322c14d312.build.__default from JWT claims
+[2020-11-05 16:38:26Z INFO JobDispatcher] Job request ca395085-040a-526b-2ce8-bdc85f692774 processed succeed.
+[2020-11-05 16:38:26Z INFO Terminal] WRITE LINE: 2020-11-05 16:38:26Z: Running job: Pytest & Flake8
+[2020-11-05 16:38:26Z INFO JobDispatcher] Start renew job request 28 for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2020-11-05 16:38:26Z INFO JobDispatcher] Successfully renew job request 28, job is valid till 11/05/2020 16:48:26
+[2020-11-05 16:38:26Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:38:26Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:38:26Z INFO ProcessInvokerWrapper]   File name: '/home/ubuntu/assignment2-yixianLu/actions-runner/bin/Runner.Worker'
+[2020-11-05 16:38:26Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 99 102'
+[2020-11-05 16:38:26Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:38:26Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:38:26Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:38:26Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2020-11-05 16:38:26Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:38:26Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:38:26Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:38:26Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2020-11-05 16:38:26Z INFO ProcessInvokerWrapper] Process started with process id 7446, waiting for process exit.
+[2020-11-05 16:38:26Z INFO JobDispatcher] Send job request message to worker for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2020-11-05 16:38:26Z INFO JobNotification] Entering JobStarted Notification
+[2020-11-05 16:38:26Z INFO JobNotification] Entering StartMonitor
+[2020-11-05 16:38:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:38:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:38:40Z INFO ProcessInvokerWrapper] Finished process 7446 with exit code 102, and elapsed time 00:00:13.8469618.
+[2020-11-05 16:38:40Z INFO JobDispatcher] Worker finished for job ca395085-040a-526b-2ce8-bdc85f692774. Code: 102
+[2020-11-05 16:38:40Z INFO JobDispatcher] finish job request for job ca395085-040a-526b-2ce8-bdc85f692774 with result: Failed
+[2020-11-05 16:38:40Z INFO Terminal] WRITE LINE: 2020-11-05 16:38:40Z: Job Pytest & Flake8 completed with result: Failed
+[2020-11-05 16:38:40Z INFO JobDispatcher] Stop renew job request for job ca395085-040a-526b-2ce8-bdc85f692774.
+[2020-11-05 16:38:40Z INFO JobDispatcher] job renew has been canceled, stop renew job request 28.
+[2020-11-05 16:38:40Z INFO JobNotification] Entering JobCompleted Notification
+[2020-11-05 16:38:40Z INFO JobNotification] Entering EndMonitor
+[2020-11-05 16:40:26Z INFO Terminal] WRITE LINE: Exiting...
+[2020-11-05 16:40:26Z INFO ConfigurationStore] IsServiceConfigured()
+[2020-11-05 16:40:26Z INFO ConfigurationStore] IsServiceConfigured: False
+[2020-11-05 16:40:26Z INFO HostContext] Runner will be shutdown for UserCancelled
+[2020-11-05 16:40:26Z WARN GitHubActionsService] GET request to https://pipelines.actions.githubusercontent.com/SlfxfpiHaA8t9bO3tik5wAhm7FVPtFt8fHahD0YDOzro3EeyeD/_apis/distributedtask/pools/1/messages?sessionId=0311cbe3-6f67-448c-ba49-19ec261e3fa3&lastMessageId=28 has been cancelled.
+[2020-11-05 16:40:26Z INFO MessageListener] Get next message has been cancelled.
+[2020-11-05 16:40:26Z INFO JobDispatcher] Shutting down JobDispatcher. Make sure all WorkerDispatcher has finished.
+[2020-11-05 16:40:26Z INFO JobDispatcher] Ensure WorkerDispather for job ca395085-040a-526b-2ce8-bdc85f692774 run to finish, cancel any running job.
+[2020-11-05 16:40:26Z INFO JobDispatcher] Job request ca395085-040a-526b-2ce8-bdc85f692774 processed succeed.
+[2020-11-05 16:40:26Z INFO Listener] Runner execution been cancelled.
