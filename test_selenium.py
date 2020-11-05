@@ -11,9 +11,10 @@ for more information on how to locate elements
 
 url = "https://cs.ualberta.ca"
 
+path = "./chromedriver"
 
 def test_401_result():
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(executable_path=path)
     driver.get(url)
     #Fill me in
 
