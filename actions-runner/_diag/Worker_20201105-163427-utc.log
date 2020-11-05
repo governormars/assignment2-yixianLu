@@ -1,0 +1,2882 @@
+[2020-11-05 16:34:27Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2020-11-05 16:34:27Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:27Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:27Z INFO HostContext] Well known config file 'Credentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials'
+[2020-11-05 16:34:27Z INFO Worker] Version: 2.273.6
+[2020-11-05 16:34:27Z INFO Worker] Commit: ad745669526010737d2ac2dcd10de80732e8390d
+[2020-11-05 16:34:27Z INFO Worker] Culture: 
+[2020-11-05 16:34:27Z INFO Worker] UI Culture: 
+[2020-11-05 16:34:27Z INFO Worker] Waiting to receive the job message from the channel.
+[2020-11-05 16:34:27Z INFO Worker] Message received.
+[2020-11-05 16:34:27Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/build-pipeline.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v2",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 11,
+        "col": 15,
+        "lit": "Pull Repository"
+      },
+      "condition": "success()",
+      "id": "e4b38c0f-6035-56ec-f78c-2cac0ce98d59",
+      "name": "actionscheckout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 13,
+        "col": 15,
+        "lit": "Install Requirements"
+      },
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 14,
+              "col": 14,
+              "lit": "pip3 install -r requirements.txt"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "26f1c419-bc2c-554c-71b6-9aa612d1c993",
+      "name": "run1"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 15,
+        "col": 15,
+        "lit": "Pytest"
+      },
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 16,
+              "col": 14,
+              "lit": "pytest test_foo.py test_selenium.py"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "64195e42-44eb-5e07-91ab-2f7354f198e9",
+      "name": "run2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 17,
+        "col": 15,
+        "lit": "Flake8"
+      },
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 18,
+              "col": 14,
+              "lit": "flake8"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "4defa5a8-59ab-5956-f82d-0fcf5fe70b66",
+      "name": "run3"
+    }
+  ],
+  "variables": {
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system": {
+      "value": "actions"
+    },
+    "system.hosttype": {
+      "value": "actions"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": "en-US"
+    },
+    "system.collectionId": {
+      "value": "83afb4b6-3806-49c0-9870-affb7d20c39f"
+    },
+    "system.collectionUri": {
+      "value": "https://pipelines.actions.githubusercontent.com/SlfxfpiHaA8t9bO3tik5wAhm7FVPtFt8fHahD0YDOzro3EeyeD/"
+    },
+    "system.taskDefinitionsUri": {
+      "value": "https://pipelines.actions.githubusercontent.com/SlfxfpiHaA8t9bO3tik5wAhm7FVPtFt8fHahD0YDOzro3EeyeD/"
+    },
+    "system.pipelineStartTime": {
+      "value": "2020-11-05 16:34:24+00:00"
+    },
+    "system.definitionId": {
+      "value": "3"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UseContextNameForGITHUBACTION": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "25"
+    },
+    "build.containerId": {
+      "value": "159401"
+    },
+    "system.definitionName": {
+      "value": "assignment2-yixianLu"
+    },
+    "system.planId": {
+      "value": "550ffae5-76d1-4e51-af79-0bacb87a3131"
+    },
+    "system.timelineId": {
+      "value": "550ffae5-76d1-4e51-af79-0bacb87a3131"
+    },
+    "system.stageDisplayName": {
+      "value": "__default"
+    },
+    "system.stageId": {
+      "value": "96ac2280-8cb4-5df5-99de-dd2da759617d"
+    },
+    "system.stageName": {
+      "value": "__default"
+    },
+    "system.stageAttempt": {
+      "value": "1"
+    },
+    "system.phaseDisplayName": {
+      "value": "Pytest & Flake8"
+    },
+    "system.phaseId": {
+      "value": "6884a131-87da-5381-61f3-d7acc3b91d76"
+    },
+    "system.phaseName": {
+      "value": "build"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "build.__default"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "1"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "1"
+    },
+    "system.github.job": {
+      "value": "build"
+    },
+    "system.jobDisplayName": {
+      "value": "Pytest & Flake8"
+    },
+    "system.jobId": {
+      "value": "ca395085-040a-526b-2ce8-bdc85f692774"
+    },
+    "system.jobName": {
+      "value": "__default"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "github_token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 12,
+    "planId": "550ffae5-76d1-4e51-af79-0bacb87a3131",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/25",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "assignment2-yixianLu"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "UAlberta-CMPUT401"
+    }
+  },
+  "timeline": {
+    "id": "550ffae5-76d1-4e51-af79-0bacb87a3131",
+    "changeId": 7,
+    "location": null
+  },
+  "jobId": "ca395085-040a-526b-2ce8-bdc85f692774",
+  "jobDisplayName": "Pytest & Flake8",
+  "jobName": "__default",
+  "jobContainer": {
+    "type": 0,
+    "file": 1,
+    "line": 9,
+    "col": 16,
+    "lit": "kalvin1234/myers-triangle"
+  },
+  "requestId": 25,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "83afb4b6-3806-49c0-9870-affb7d20c39f",
+          "ServerName": "SlfxfpiHaA8t9bO3tik5wAhm7FVPtFt8fHahD0YDOzro3EeyeD",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/SlfxfpiHaA8t9bO3tik5wAhm7FVPtFt8fHahD0YDOzro3EeyeD/"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelines.actions.githubusercontent.com/SlfxfpiHaA8t9bO3tik5wAhm7FVPtFt8fHahD0YDOzro3EeyeD/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/yixianLu-patch-1"
+        },
+        {
+          "k": "sha",
+          "v": "07c25366a96c96068517cae9fa529add7bd1e570"
+        },
+        {
+          "k": "repository",
+          "v": "UAlberta-CMPUT401/assignment2-yixianLu"
+        },
+        {
+          "k": "repository_owner",
+          "v": "UAlberta-CMPUT401"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/UAlberta-CMPUT401/assignment2-yixianLu.git"
+        },
+        {
+          "k": "run_id",
+          "v": "347874446"
+        },
+        {
+          "k": "run_number",
+          "v": "16"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "actor",
+          "v": "yixianLu"
+        },
+        {
+          "k": "workflow",
+          "v": "Build Pipeline"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "07c25366a96c96068517cae9fa529add7bd1e570"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "1ea837ed7652171300d4f6428718a116cfaf3954"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "yixian@ualberta.ca"
+                              },
+                              {
+                                "k": "name",
+                                "v": "yixianLu"
+                              },
+                              {
+                                "k": "username",
+                                "v": "yixianLu"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "yixian@ualberta.ca"
+                              },
+                              {
+                                "k": "name",
+                                "v": "yixianLu"
+                              },
+                              {
+                                "k": "username",
+                                "v": "yixianLu"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "6f3c50cefa8c53d049b4a8b55e662fc6fb718db9"
+                        },
+                        {
+                          "k": "message",
+                          "v": "resolve the pull issue"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2020-11-05T16:18:03Z"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "8ce0b61dd47416ec099a990e8d24de14faf4dce2"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/UAlberta-CMPUT401/assignment2-yixianLu/commit/6f3c50cefa8c53d049b4a8b55e662fc6fb718db9"
+                        }
+                      ]
+                    },
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "yixian@ualberta.ca"
+                              },
+                              {
+                                "k": "name",
+                                "v": "yixianLu"
+                              },
+                              {
+                                "k": "username",
+                                "v": "yixianLu"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "yixian@ualberta.ca"
+                              },
+                              {
+                                "k": "name",
+                                "v": "yixianLu"
+                              },
+                              {
+                                "k": "username",
+                                "v": "yixianLu"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "fe1f4e3e492047b1ba3c97cf9c5a7d6faeb3d3da"
+                        },
+                        {
+                          "k": "message",
+                          "v": "Merge branch 'yixianLu-patch-1' of https://github.com/UAlberta-CMPUT401/assignment2-yixianLu into yixianLu-patch-1"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2020-11-05T16:21:16Z"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "fb42f541dc627b76f6cd27ef6fe014144e98b3a3"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/UAlberta-CMPUT401/assignment2-yixianLu/commit/fe1f4e3e492047b1ba3c97cf9c5a7d6faeb3d3da"
+                        }
+                      ]
+                    },
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "yixian@ualberta.ca"
+                              },
+                              {
+                                "k": "name",
+                                "v": "yixianLu"
+                              },
+                              {
+                                "k": "username",
+                                "v": "yixianLu"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "yixian@ualberta.ca"
+                              },
+                              {
+                                "k": "name",
+                                "v": "yixianLu"
+                              },
+                              {
+                                "k": "username",
+                                "v": "yixianLu"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "07c25366a96c96068517cae9fa529add7bd1e570"
+                        },
+                        {
+                          "k": "message",
+                          "v": "resolve for error"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2020-11-05T16:31:06Z"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "8ba58cde0fa2eb25af817182e7f86d655fc7ba18"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/UAlberta-CMPUT401/assignment2-yixianLu/commit/07c25366a96c96068517cae9fa529add7bd1e570"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/UAlberta-CMPUT401/assignment2-yixianLu/compare/1ea837ed7652...07c25366a96c"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "yixian@ualberta.ca"
+                          },
+                          {
+                            "k": "name",
+                            "v": "yixianLu"
+                          },
+                          {
+                            "k": "username",
+                            "v": "yixianLu"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "yixian@ualberta.ca"
+                          },
+                          {
+                            "k": "name",
+                            "v": "yixianLu"
+                          },
+                          {
+                            "k": "username",
+                            "v": "yixianLu"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "07c25366a96c96068517cae9fa529add7bd1e570"
+                    },
+                    {
+                      "k": "message",
+                      "v": "resolve for error"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2020-11-05T16:31:06Z"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "8ba58cde0fa2eb25af817182e7f86d655fc7ba18"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/UAlberta-CMPUT401/assignment2-yixianLu/commit/07c25366a96c96068517cae9fa529add7bd1e570"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "organization",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars0.githubusercontent.com/u/54641616?v=4"
+                    },
+                    {
+                      "k": "description",
+                      "v": "This is the organization for CMPUT 401 courses at the University of Alberta"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/orgs/UAlberta-CMPUT401/events"
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/orgs/UAlberta-CMPUT401/hooks"
+                    },
+                    {
+                      "k": "id",
+                      "v": 54641616.0
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/orgs/UAlberta-CMPUT401/issues"
+                    },
+                    {
+                      "k": "login",
+                      "v": "UAlberta-CMPUT401"
+                    },
+                    {
+                      "k": "members_url",
+                      "v": "https://api.github.com/orgs/UAlberta-CMPUT401/members{/member}"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDEyOk9yZ2FuaXphdGlvbjU0NjQxNjE2"
+                    },
+                    {
+                      "k": "public_members_url",
+                      "v": "https://api.github.com/orgs/UAlberta-CMPUT401/public_members{/member}"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/orgs/UAlberta-CMPUT401/repos"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/orgs/UAlberta-CMPUT401"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "43053645+yixianLu@users.noreply.github.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "yixianLu"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/yixianLu-patch-1"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/UAlberta-CMPUT401/assignment2-yixianLu.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1604466564.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": "assignment2-yixianLu created by GitHub Classroom"
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "UAlberta-CMPUT401/assignment2-yixianLu"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/UAlberta-CMPUT401/assignment2-yixianLu.git"
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/UAlberta-CMPUT401/assignment2-yixianLu"
+                    },
+                    {
+                      "k": "id",
+                      "v": 309893960.0
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "Python"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "assignment2-yixianLu"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDEwOlJlcG9zaXRvcnkzMDk4OTM5NjA="
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "organization",
+                      "v": "UAlberta-CMPUT401"
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars0.githubusercontent.com/u/54641616?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": null
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/UAlberta-CMPUT401/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/UAlberta-CMPUT401/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/UAlberta-CMPUT401/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/UAlberta-CMPUT401/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/UAlberta-CMPUT401"
+                          },
+                          {
+                            "k": "id",
+                            "v": 54641616.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "UAlberta-CMPUT401"
+                          },
+                          {
+                            "k": "name",
+                            "v": "UAlberta-CMPUT401"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDEyOk9yZ2FuaXphdGlvbjU0NjQxNjE2"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/UAlberta-CMPUT401/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/UAlberta-CMPUT401/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/UAlberta-CMPUT401/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/UAlberta-CMPUT401/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/UAlberta-CMPUT401/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "Organization"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/UAlberta-CMPUT401"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1604593944.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 152156.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:UAlberta-CMPUT401/assignment2-yixianLu.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/UAlberta-CMPUT401/assignment2-yixianLu"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/teams"
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/UAlberta-CMPUT401/assignment2-yixianLu/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2020-11-05T15:19:17Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/UAlberta-CMPUT401/assignment2-yixianLu"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars2.githubusercontent.com/u/43053645?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/yixianLu/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/yixianLu/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/yixianLu/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/yixianLu/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/yixianLu"
+                    },
+                    {
+                      "k": "id",
+                      "v": 43053645.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "yixianLu"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDQ6VXNlcjQzMDUzNjQ1"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/yixianLu/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/yixianLu/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/yixianLu/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/yixianLu/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/yixianLu/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/yixianLu"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        }
+      ]
+    },
+    "needs": {
+      "t": 2
+    },
+    "matrix": null,
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    }
+  }
+}
+[2020-11-05 16:34:27Z INFO JobRunner] Job ID ca395085-040a-526b-2ce8-bdc85f692774
+[2020-11-05 16:34:27Z INFO JobRunner] Creating job server with URL: https://pipelines.actions.githubusercontent.com/SlfxfpiHaA8t9bO3tik5wAhm7FVPtFt8fHahD0YDOzro3EeyeD/
+[2020-11-05 16:34:27Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-05 16:34:27Z INFO Worker] Listening for cancel message from the channel.
+[2020-11-05 16:34:27Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2020-11-05 16:34:28Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-05 16:34:28Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-05 16:34:29Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-05 16:34:29Z INFO JobServerQueue] Start process web console line queue.
+[2020-11-05 16:34:29Z INFO JobServerQueue] Start process file upload queue.
+[2020-11-05 16:34:29Z INFO JobServerQueue] Start process timeline update queue.
+[2020-11-05 16:34:29Z INFO ExecutionContext] Initialize GitHub context
+[2020-11-05 16:34:29Z INFO ExecutionContext] Initialize Env context
+[2020-11-05 16:34:29Z INFO ConfigurationStore] currentAssemblyLocation: /home/ubuntu/assignment2-yixianLu/actions-runner/bin/Runner.Worker.dll
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO ConfigurationStore] binPath: /home/ubuntu/assignment2-yixianLu/actions-runner/bin
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO ConfigurationStore] RootFolder: /home/ubuntu/assignment2-yixianLu/actions-runner
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known config file 'Runner': '/home/ubuntu/assignment2-yixianLu/actions-runner/.runner'
+[2020-11-05 16:34:29Z INFO ConfigurationStore] ConfigFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.runner
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known config file 'Credentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials'
+[2020-11-05 16:34:29Z INFO ConfigurationStore] CredFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known config file 'MigratedCredentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_migrated'
+[2020-11-05 16:34:29Z INFO ConfigurationStore] MigratedCredFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_migrated
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known config file 'Service': '/home/ubuntu/assignment2-yixianLu/actions-runner/.service'
+[2020-11-05 16:34:29Z INFO ConfigurationStore] ServiceConfigFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.service
+[2020-11-05 16:34:29Z INFO ConfigurationStore] Read setting file: 319 chars
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Diag': '/home/ubuntu/assignment2-yixianLu/actions-runner/_diag'
+[2020-11-05 16:34:29Z INFO JobRunner] Starting the job execution context.
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:29Z INFO JobRunner] Validating directory permissions for: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Tools': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_tool'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Temp': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp'
+[2020-11-05 16:34:29Z INFO JobRunner] Getting job extension.
+[2020-11-05 16:34:29Z INFO JobRunner] Initialize job. Getting all job steps.
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Diag': '/home/ubuntu/assignment2-yixianLu/actions-runner/_diag'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known config file 'Credentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known config file 'SetupInfo': '/home/ubuntu/assignment2-yixianLu/actions-runner/.setup_info'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:29Z INFO PipelineDirectoryManager] Loading tracking config if exists: /home/ubuntu/assignment2-yixianLu/actions-runner/_work/_PipelineMapping/UAlberta-CMPUT401/assignment2-yixianLu/PipelineFolder.json
+[2020-11-05 16:34:29Z INFO PipelineDirectoryManager] Updating job run properties.
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Tools': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_tool'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Externals': '/home/ubuntu/assignment2-yixianLu/actions-runner/externals'
+[2020-11-05 16:34:29Z INFO JobExtension] Downloading actions
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Actions': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Actions': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:29Z INFO HostContext] Well known directory 'Actions': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions'
+[2020-11-05 16:34:29Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/tarball/5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f' into /home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions/_temp_c8df8d31-a726-4213-badc-d806a209fea0/917581e8-205e-4b4e-8790-55430a5ce46e.tar.gz.
+[2020-11-05 16:34:29Z INFO JobServerQueue] Try to append 1 batches web console lines for record '8d5babf4-30c2-4463-ba49-2c87d9f963dc', success rate: 1/1.
+[2020-11-05 16:34:30Z INFO JobServerQueue] Try to append 1 batches web console lines for record '8d5babf4-30c2-4463-ba49-2c87d9f963dc', success rate: 1/1.
+[2020-11-05 16:34:30Z INFO ActionManager] Which: 'tar'
+[2020-11-05 16:34:30Z INFO ActionManager] Location: '/bin/tar'
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper]   File name: '/bin/tar'
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper]   Arguments: '-xzf "/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions/_temp_c8df8d31-a726-4213-badc-d806a209fea0/917581e8-205e-4b4e-8790-55430a5ce46e.tar.gz"'
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions/_temp_c8df8d31-a726-4213-badc-d806a209fea0/_staging'
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 5736.
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper] Process started with process id 5736, waiting for process exit.
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:30Z INFO ProcessInvokerWrapper] Finished process 5736 with exit code 0, and elapsed time 00:00:00.0366256.
+[2020-11-05 16:34:31Z INFO ActionManager] Finished getting action repository.
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Actions': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions'
+[2020-11-05 16:34:31Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "outputs-attributes",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node12-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "step-env"
+]
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Actions': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions'
+[2020-11-05 16:34:31Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2020-11-05 16:34:31Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Actions': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions'
+[2020-11-05 16:34:31Z INFO ActionManager] Load action that reference repository from '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions/actions/checkout/v2'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Actions': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions'
+[2020-11-05 16:34:31Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2020-11-05 16:34:31Z INFO ActionManager] Action pre node.js file: N/A.
+[2020-11-05 16:34:31Z INFO ActionManager] Action node.js file: dist/index.js.
+[2020-11-05 16:34:31Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2020-11-05 16:34:31Z INFO DockerCommandManager] Which: 'docker'
+[2020-11-05 16:34:31Z INFO DockerCommandManager] Location: '/usr/bin/docker'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:31Z INFO JobExtension] Adding .
+[2020-11-05 16:34:31Z INFO JobExtension] Adding .
+[2020-11-05 16:34:31Z INFO JobExtension] Adding .
+[2020-11-05 16:34:31Z INFO JobExtension] Adding .
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Diag': '/home/ubuntu/assignment2-yixianLu/actions-runner/_diag'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Diag': '/home/ubuntu/assignment2-yixianLu/actions-runner/_diag'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Diag': '/home/ubuntu/assignment2-yixianLu/actions-runner/_diag'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Diag': '/home/ubuntu/assignment2-yixianLu/actions-runner/_diag'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Diag': '/home/ubuntu/assignment2-yixianLu/actions-runner/_diag'
+[2020-11-05 16:34:31Z INFO JobExtension] Total accessible running process: 98.
+[2020-11-05 16:34:31Z INFO JobRunner] Total job steps: 5.
+[2020-11-05 16:34:31Z INFO JobRunner] Run all job steps.
+[2020-11-05 16:34:31Z INFO StepsRunner] Processing step: DisplayName='Initialize containers'
+[2020-11-05 16:34:31Z INFO StepsRunner] Initialize Env context for step
+[2020-11-05 16:34:31Z INFO StepsRunner] Evaluating: success()
+[2020-11-05 16:34:31Z INFO StepsRunner] Result: true
+[2020-11-05 16:34:31Z INFO StepsRunner] Starting the step.
+[2020-11-05 16:34:31Z INFO ExecutionContext] Reserve record order 7 to 12 for post job actions.
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:31Z INFO HostContext] Well known directory 'Diag': '/home/ubuntu/assignment2-yixianLu/actions-runner/_diag'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Arguments: 'version --format '{{.Server.APIVersion}}''
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/assignment2-yixianLu/assignment2-yixianLu'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Require exit code zero: 'True'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 5739.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Process started with process id 5739, waiting for process exit.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Finished process 5739 with exit code 0, and elapsed time 00:00:00.1011898.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Arguments: 'version --format '{{.Client.APIVersion}}''
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/assignment2-yixianLu/assignment2-yixianLu'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Require exit code zero: 'True'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 5754.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Process started with process id 5754, waiting for process exit.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Finished process 5754 with exit code 0, and elapsed time 00:00:00.0690668.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Arguments: 'ps --all --quiet --no-trunc --filter "label=87f5aa"'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/assignment2-yixianLu/assignment2-yixianLu'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Require exit code zero: 'True'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 5769.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Process started with process id 5769, waiting for process exit.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Finished process 5769 with exit code 0, and elapsed time 00:00:00.0512151.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Arguments: 'network prune --force --filter "label=87f5aa"'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/assignment2-yixianLu/assignment2-yixianLu'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 5776.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Process started with process id 5776, waiting for process exit.
+[2020-11-05 16:34:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record '006b3c6e-64a1-4cca-b39a-eb56ba54c644', success rate: 1/1.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Finished process 5776 with exit code 0, and elapsed time 00:00:00.0532657.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Arguments: 'network create --label 87f5aa github_network_08965daca14741d7bdb9d337b924a999'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/assignment2-yixianLu/assignment2-yixianLu'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 5784.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Process started with process id 5784, waiting for process exit.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Finished process 5784 with exit code 0, and elapsed time 00:00:00.1658112.
+[2020-11-05 16:34:31Z INFO ContainerOperationProvider] Container name: 7fcaf1780fdc403d83055b76173b8195
+[2020-11-05 16:34:31Z INFO ContainerOperationProvider] Container image: kalvin1234/myers-triangle
+[2020-11-05 16:34:31Z INFO ContainerOperationProvider] Container options: 
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Arguments: 'pull kalvin1234/myers-triangle'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/assignment2-yixianLu/assignment2-yixianLu'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 5827.
+[2020-11-05 16:34:31Z INFO ProcessInvokerWrapper] Process started with process id 5827, waiting for process exit.
+[2020-11-05 16:34:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record '006b3c6e-64a1-4cca-b39a-eb56ba54c644', success rate: 1/1.
+[2020-11-05 16:34:32Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper] Finished process 5827 with exit code 0, and elapsed time 00:00:00.9793294.
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Externals': '/home/ubuntu/assignment2-yixianLu/actions-runner/externals'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Externals': '/home/ubuntu/assignment2-yixianLu/actions-runner/externals'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Temp': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Temp': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Actions': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Actions': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Tools': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_tool'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Tools': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_tool'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Temp': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:32Z INFO HostContext] Well known directory 'Temp': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp'
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper]   Arguments: 'create --name 7fcaf1780fdc403d83055b76173b8195_kalvin1234myerstriangle_af6591 --label 87f5aa --workdir /__w/assignment2-yixianLu/assignment2-yixianLu --network github_network_08965daca14741d7bdb9d337b924a999  -e "HOME=/github/home" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/ubuntu/assignment2-yixianLu/actions-runner/_work":"/__w" -v "/home/ubuntu/assignment2-yixianLu/actions-runner/externals":"/__e":ro -v "/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp":"/__w/_temp" -v "/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions":"/__w/_actions" -v "/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_tool":"/__w/_tool" -v "/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp/_github_home":"/github/home" -v "/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp/_github_workflow":"/github/workflow" --entrypoint "tail" kalvin1234/myers-triangle "-f" "/dev/null"'
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/assignment2-yixianLu/assignment2-yixianLu'
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper]   Require exit code zero: 'True'
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 5841.
+[2020-11-05 16:34:32Z INFO ProcessInvokerWrapper] Process started with process id 5841, waiting for process exit.
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper] Finished process 5841 with exit code 0, and elapsed time 00:00:00.3542896.
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper]   Arguments: 'start 3788aeb439db6abb993915f81d26b250b21dab601dc2888b8716b7d1c85662e6'
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/assignment2-yixianLu/assignment2-yixianLu'
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 5849.
+[2020-11-05 16:34:33Z INFO ProcessInvokerWrapper] Process started with process id 5849, waiting for process exit.
+[2020-11-05 16:34:33Z INFO JobServerQueue] Try to append 1 batches web console lines for record '006b3c6e-64a1-4cca-b39a-eb56ba54c644', success rate: 1/1.
+[2020-11-05 16:34:34Z INFO JobServerQueue] Try to append 1 batches web console lines for record '006b3c6e-64a1-4cca-b39a-eb56ba54c644', success rate: 1/1.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Finished process 5849 with exit code 0, and elapsed time 00:00:01.1156065.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Arguments: 'ps --all --filter id=3788aeb439db6abb993915f81d26b250b21dab601dc2888b8716b7d1c85662e6 --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/assignment2-yixianLu/assignment2-yixianLu'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Require exit code zero: 'True'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 5954.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Process started with process id 5954, waiting for process exit.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Finished process 5954 with exit code 0, and elapsed time 00:00:00.0563612.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Arguments: 'inspect --format "{{range .Config.Env}}{{println .}}{{end}}" 3788aeb439db6abb993915f81d26b250b21dab601dc2888b8716b7d1c85662e6'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/assignment2-yixianLu/assignment2-yixianLu'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Require exit code zero: 'True'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 5962.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Process started with process id 5962, waiting for process exit.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Finished process 5962 with exit code 0, and elapsed time 00:00:00.0557804.
+[2020-11-05 16:34:34Z INFO StepsRunner] Step result: 
+[2020-11-05 16:34:34Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2020-11-05 16:34:34Z INFO StepsRunner] Current state: job state = ''
+[2020-11-05 16:34:34Z INFO StepsRunner] Processing step: DisplayName='Pull Repository'
+[2020-11-05 16:34:34Z INFO StepsRunner] Initialize Env context for step
+[2020-11-05 16:34:34Z INFO StepsRunner] Evaluating: success()
+[2020-11-05 16:34:34Z INFO StepsRunner] Result: true
+[2020-11-05 16:34:34Z INFO StepsRunner] Starting the step.
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Actions': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions'
+[2020-11-05 16:34:34Z INFO ActionManager] Load action that reference repository from '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions/actions/checkout/v2'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Actions': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions'
+[2020-11-05 16:34:34Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2020-11-05 16:34:34Z INFO ActionManager] Action pre node.js file: N/A.
+[2020-11-05 16:34:34Z INFO ActionManager] Action node.js file: dist/index.js.
+[2020-11-05 16:34:34Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Diag': '/home/ubuntu/assignment2-yixianLu/actions-runner/_diag'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Temp': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp'
+[2020-11-05 16:34:34Z INFO ActionRunner] Write event payload to /home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp/_github_workflow/event.json
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Temp': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp'
+[2020-11-05 16:34:34Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2020-11-05 16:34:34Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "UAlberta-CMPUT401/assignment2-yixianLu"
+}
+[2020-11-05 16:34:34Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2020-11-05 16:34:34Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2020-11-05 16:34:34Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2020-11-05 16:34:34Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2020-11-05 16:34:34Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2020-11-05 16:34:34Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2020-11-05 16:34:34Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2020-11-05 16:34:34Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2020-11-05 16:34:34Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2020-11-05 16:34:34Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2020-11-05 16:34:34Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2020-11-05 16:34:34Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command set-env
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command set-output
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command save-state
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command add-path
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command warning
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command error
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command debug
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command group
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2020-11-05 16:34:34Z INFO ActionCommandManager] Register action command extension for command echo
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Arguments: 'exec  3788aeb439db6abb993915f81d26b250b21dab601dc2888b8716b7d1c85662e6 sh -c "cat /etc/*release | grep ^ID"'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 5970.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Process started with process id 5970, waiting for process exit.
+[2020-11-05 16:34:34Z INFO JobServerQueue] Try to append 1 batches web console lines for record '006b3c6e-64a1-4cca-b39a-eb56ba54c644', success rate: 1/1.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Finished process 5970 with exit code 0, and elapsed time 00:00:00.2044085.
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Externals': '/home/ubuntu/assignment2-yixianLu/actions-runner/externals'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:34Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Arguments: 'exec -i --workdir /__w/assignment2-yixianLu/assignment2-yixianLu -e INPUT_REPOSITORY -e INPUT_REF -e INPUT_TOKEN -e INPUT_SSH-KEY -e INPUT_SSH-KNOWN-HOSTS -e INPUT_SSH-STRICT -e INPUT_PERSIST-CREDENTIALS -e INPUT_PATH -e INPUT_CLEAN -e INPUT_FETCH-DEPTH -e INPUT_LFS -e INPUT_SUBMODULES -e GITHUB_JOB -e GITHUB_REF -e GITHUB_SHA -e GITHUB_REPOSITORY -e GITHUB_REPOSITORY_OWNER -e GITHUB_RUN_ID -e GITHUB_RUN_NUMBER -e GITHUB_RETENTION_DAYS -e GITHUB_ACTOR -e GITHUB_WORKFLOW -e GITHUB_HEAD_REF -e GITHUB_BASE_REF -e GITHUB_EVENT_NAME -e GITHUB_SERVER_URL -e GITHUB_API_URL -e GITHUB_GRAPHQL_URL -e GITHUB_WORKSPACE -e GITHUB_ACTION -e GITHUB_EVENT_PATH -e GITHUB_PATH -e GITHUB_ENV -e RUNNER_OS -e RUNNER_TOOL_CACHE -e RUNNER_TEMP -e RUNNER_WORKSPACE -e ACTIONS_RUNTIME_URL -e ACTIONS_RUNTIME_TOKEN -e ACTIONS_CACHE_URL 3788aeb439db6abb993915f81d26b250b21dab601dc2888b8716b7d1c85662e6 /__e/node12/bin/node /__w/_actions/actions/checkout/v2/dist/index.js'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 6006.
+[2020-11-05 16:34:34Z INFO ProcessInvokerWrapper] Process started with process id 6006, waiting for process exit.
+[2020-11-05 16:34:34Z INFO JobServerQueue] Try to append 1 batches web console lines for record '006b3c6e-64a1-4cca-b39a-eb56ba54c644', success rate: 1/1.
+[2020-11-05 16:34:34Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e4b38c0f-6035-56ec-f78c-2cac0ce98d59', success rate: 1/1.
+[2020-11-05 16:34:35Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2020-11-05 16:34:35Z INFO AddMaskCommandExtension] Add new secret mask with length of 80
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] Finished process 6006 with exit code 1, and elapsed time 00:00:00.5515623.
+[2020-11-05 16:34:35Z INFO StepsRunner] Step result: Failed
+[2020-11-05 16:34:35Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2020-11-05 16:34:35Z INFO StepsRunner] Current state: job state = 'Failed'
+[2020-11-05 16:34:35Z INFO StepsRunner] Processing step: DisplayName='Install Requirements'
+[2020-11-05 16:34:35Z INFO StepsRunner] Initialize Env context for step
+[2020-11-05 16:34:35Z INFO StepsRunner] Evaluating: success()
+[2020-11-05 16:34:35Z INFO StepsRunner] Result: false
+[2020-11-05 16:34:35Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2020-11-05 16:34:35Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2020-11-05 16:34:35Z INFO StepsRunner] Current state: job state = 'Failed'
+[2020-11-05 16:34:35Z INFO StepsRunner] Processing step: DisplayName='Pytest'
+[2020-11-05 16:34:35Z INFO StepsRunner] Initialize Env context for step
+[2020-11-05 16:34:35Z INFO StepsRunner] Evaluating: success()
+[2020-11-05 16:34:35Z INFO StepsRunner] Result: false
+[2020-11-05 16:34:35Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2020-11-05 16:34:35Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2020-11-05 16:34:35Z INFO StepsRunner] Current state: job state = 'Failed'
+[2020-11-05 16:34:35Z INFO StepsRunner] Processing step: DisplayName='Flake8'
+[2020-11-05 16:34:35Z INFO StepsRunner] Initialize Env context for step
+[2020-11-05 16:34:35Z INFO StepsRunner] Evaluating: success()
+[2020-11-05 16:34:35Z INFO StepsRunner] Result: false
+[2020-11-05 16:34:35Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2020-11-05 16:34:35Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2020-11-05 16:34:35Z INFO StepsRunner] Current state: job state = 'Failed'
+[2020-11-05 16:34:35Z INFO StepsRunner] Processing step: DisplayName='Post Pull Repository'
+[2020-11-05 16:34:35Z INFO StepsRunner] Initialize Env context for step
+[2020-11-05 16:34:35Z INFO StepsRunner] Evaluating: always()
+[2020-11-05 16:34:35Z INFO StepsRunner] Result: true
+[2020-11-05 16:34:35Z INFO StepsRunner] Starting the step.
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Actions': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions'
+[2020-11-05 16:34:35Z INFO ActionManager] Load action that reference repository from '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions/actions/checkout/v2'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Actions': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_actions'
+[2020-11-05 16:34:35Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2020-11-05 16:34:35Z INFO ActionManager] Action pre node.js file: N/A.
+[2020-11-05 16:34:35Z INFO ActionManager] Action node.js file: dist/index.js.
+[2020-11-05 16:34:35Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Temp': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp'
+[2020-11-05 16:34:35Z INFO ActionRunner] Write event payload to /home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp/_github_workflow/event.json
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Temp': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp'
+[2020-11-05 16:34:35Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2020-11-05 16:34:35Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "UAlberta-CMPUT401/assignment2-yixianLu"
+}
+[2020-11-05 16:34:35Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2020-11-05 16:34:35Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2020-11-05 16:34:35Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2020-11-05 16:34:35Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2020-11-05 16:34:35Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2020-11-05 16:34:35Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2020-11-05 16:34:35Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2020-11-05 16:34:35Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2020-11-05 16:34:35Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2020-11-05 16:34:35Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2020-11-05 16:34:35Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2020-11-05 16:34:35Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command set-env
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command set-output
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command save-state
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command add-path
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command warning
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command error
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command debug
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command group
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2020-11-05 16:34:35Z INFO ActionCommandManager] Register action command extension for command echo
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Arguments: 'exec  3788aeb439db6abb993915f81d26b250b21dab601dc2888b8716b7d1c85662e6 sh -c "cat /etc/*release | grep ^ID"'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 6096.
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] Process started with process id 6096, waiting for process exit.
+[2020-11-05 16:34:35Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e4b38c0f-6035-56ec-f78c-2cac0ce98d59', success rate: 1/1.
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] Finished process 6096 with exit code 0, and elapsed time 00:00:00.2002947.
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Externals': '/home/ubuntu/assignment2-yixianLu/actions-runner/externals'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:35Z INFO HostContext] Well known directory 'Work': '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Arguments: 'exec -i --workdir /__w/assignment2-yixianLu/assignment2-yixianLu -e STATE_isPost -e STATE_repositoryPath -e INPUT_REPOSITORY -e INPUT_REF -e INPUT_TOKEN -e INPUT_SSH-KEY -e INPUT_SSH-KNOWN-HOSTS -e INPUT_SSH-STRICT -e INPUT_PERSIST-CREDENTIALS -e INPUT_PATH -e INPUT_CLEAN -e INPUT_FETCH-DEPTH -e INPUT_LFS -e INPUT_SUBMODULES -e GITHUB_JOB -e GITHUB_REF -e GITHUB_SHA -e GITHUB_REPOSITORY -e GITHUB_REPOSITORY_OWNER -e GITHUB_RUN_ID -e GITHUB_RUN_NUMBER -e GITHUB_RETENTION_DAYS -e GITHUB_ACTOR -e GITHUB_WORKFLOW -e GITHUB_HEAD_REF -e GITHUB_BASE_REF -e GITHUB_EVENT_NAME -e GITHUB_SERVER_URL -e GITHUB_API_URL -e GITHUB_GRAPHQL_URL -e GITHUB_WORKSPACE -e GITHUB_ACTION -e GITHUB_EVENT_PATH -e GITHUB_PATH -e GITHUB_ENV -e RUNNER_OS -e RUNNER_TOOL_CACHE -e RUNNER_TEMP -e RUNNER_WORKSPACE -e ACTIONS_RUNTIME_URL -e ACTIONS_RUNTIME_TOKEN -e ACTIONS_CACHE_URL 3788aeb439db6abb993915f81d26b250b21dab601dc2888b8716b7d1c85662e6 /__e/node12/bin/node /__w/_actions/actions/checkout/v2/dist/index.js'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:35Z INFO JobServerQueue] Try to append 1 batches web console lines for record '7c0eca65-156d-47c2-a35d-281088a4bf0e', success rate: 1/1.
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 6128.
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] Process started with process id 6128, waiting for process exit.
+[2020-11-05 16:34:35Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] Finished process 6128 with exit code 0, and elapsed time 00:00:00.4596457.
+[2020-11-05 16:34:35Z INFO StepsRunner] Step result: 
+[2020-11-05 16:34:35Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2020-11-05 16:34:35Z INFO StepsRunner] Current state: job state = 'Failed'
+[2020-11-05 16:34:35Z INFO StepsRunner] Processing step: DisplayName='Stop containers'
+[2020-11-05 16:34:35Z INFO StepsRunner] Initialize Env context for step
+[2020-11-05 16:34:35Z INFO StepsRunner] Evaluating: always()
+[2020-11-05 16:34:35Z INFO StepsRunner] Result: true
+[2020-11-05 16:34:35Z INFO StepsRunner] Starting the step.
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Arguments: 'rm --force 3788aeb439db6abb993915f81d26b250b21dab601dc2888b8716b7d1c85662e6'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/assignment2-yixianLu/assignment2-yixianLu'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 6196.
+[2020-11-05 16:34:35Z INFO ProcessInvokerWrapper] Process started with process id 6196, waiting for process exit.
+[2020-11-05 16:34:36Z INFO JobServerQueue] Try to append 1 batches web console lines for record '7c0eca65-156d-47c2-a35d-281088a4bf0e', success rate: 1/1.
+[2020-11-05 16:34:36Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd39651c8-5d5a-43e3-9fe8-3e90af9a6b90', success rate: 1/1.
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper] Finished process 6196 with exit code 0, and elapsed time 00:00:00.6720928.
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper] Starting process:
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/docker'
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper]   Arguments: 'network rm github_network_08965daca14741d7bdb9d337b924a999'
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper]   Working directory: '/home/ubuntu/assignment2-yixianLu/actions-runner/_work/assignment2-yixianLu/assignment2-yixianLu'
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 6248.
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper] Process started with process id 6248, waiting for process exit.
+[2020-11-05 16:34:36Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2020-11-05 16:34:36Z INFO ProcessInvokerWrapper] Finished process 6248 with exit code 0, and elapsed time 00:00:00.1714369.
+[2020-11-05 16:34:36Z INFO StepsRunner] Step result: 
+[2020-11-05 16:34:36Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2020-11-05 16:34:36Z INFO StepsRunner] Current state: job state = 'Failed'
+[2020-11-05 16:34:36Z INFO JobRunner] Finalize job.
+[2020-11-05 16:34:36Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-05 16:34:36Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-05 16:34:36Z INFO HostContext] Well known directory 'Diag': '/home/ubuntu/assignment2-yixianLu/actions-runner/_diag'
+[2020-11-05 16:34:36Z INFO JobExtension] Total accessible running process: 100.
+[2020-11-05 16:34:36Z INFO JobExtension] Inspecting process environment variables. PID: 6071 (kworker/0:2)
+[2020-11-05 16:34:36Z INFO LinuxProcessExtensions] Read env from /proc/6071/environ
+[2020-11-05 16:34:36Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/6071/environ' is denied.
+[2020-11-05 16:34:36Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd39651c8-5d5a-43e3-9fe8-3e90af9a6b90', success rate: 1/1.
+[2020-11-05 16:34:36Z INFO JobExtension] Inspecting process environment variables. PID: 6211 (kworker/1:0)
+[2020-11-05 16:34:36Z INFO LinuxProcessExtensions] Read env from /proc/6211/environ
+[2020-11-05 16:34:36Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/6211/environ' is denied.
+[2020-11-05 16:34:36Z INFO JobRunner] Job result after all job steps finish: Failed
+[2020-11-05 16:34:36Z INFO JobRunner] Completing the job execution context.
+[2020-11-05 16:34:36Z INFO JobRunner] Shutting down the job server queue.
+[2020-11-05 16:34:36Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2020-11-05 16:34:37Z INFO JobServerQueue] All queue process task stopped.
+[2020-11-05 16:34:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd39651c8-5d5a-43e3-9fe8-3e90af9a6b90', success rate: 1/1.
+[2020-11-05 16:34:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record '1aa0b7dc-7c4d-4cf9-8996-4d9396c4d6a5', success rate: 1/1.
+[2020-11-05 16:34:37Z INFO JobServerQueue] Web console line queue drained.
+[2020-11-05 16:34:37Z INFO JobServerQueue] Uploading 3 files in one shot.
+[2020-11-05 16:34:38Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2020-11-05 16:34:38Z INFO JobServerQueue] File upload queue drained.
+[2020-11-05 16:34:38Z INFO JobServerQueue] Timeline update queue drained.
+[2020-11-05 16:34:38Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2020-11-05 16:34:38Z INFO TempDirectoryManager] Cleaning runner temp folder: /home/ubuntu/assignment2-yixianLu/actions-runner/_work/_temp
+[2020-11-05 16:34:38Z INFO JobRunner] Raising job completed event.
+[2020-11-05 16:34:38Z INFO Worker] Job completed.
