@@ -1,0 +1,133 @@
+[2020-11-06 01:38:35Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-06 01:38:35Z INFO HostContext] Well known config file 'Credentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials'
+[2020-11-06 01:38:35Z INFO Listener] Runner is built for Linux (X64) - linux-x64.
+[2020-11-06 01:38:35Z INFO Listener] RuntimeInformation: Linux 4.15.0-118-generic #119-Ubuntu SMP Tue Sep 8 12:30:01 UTC 2020.
+[2020-11-06 01:38:35Z INFO Listener] Version: 2.273.6
+[2020-11-06 01:38:35Z INFO Listener] Commit: ad745669526010737d2ac2dcd10de80732e8390d
+[2020-11-06 01:38:35Z INFO Listener] Culture: 
+[2020-11-06 01:38:35Z INFO Listener] UI Culture: 
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-06 01:38:35Z INFO Listener] Validating directory permissions for: '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-06 01:38:35Z INFO CommandLineParser] Parse
+[2020-11-06 01:38:35Z INFO CommandLineParser] Parsing 1 args
+[2020-11-06 01:38:35Z INFO CommandLineParser] parsing argument
+[2020-11-06 01:38:35Z INFO CommandLineParser] HasArgs: False
+[2020-11-06 01:38:35Z INFO CommandLineParser] Adding Command: run
+[2020-11-06 01:38:35Z INFO Listener] Arguments parsed
+[2020-11-06 01:38:35Z INFO Runner] ExecuteCommand
+[2020-11-06 01:38:35Z INFO ConfigurationStore] currentAssemblyLocation: /home/ubuntu/assignment2-yixianLu/actions-runner/bin/Runner.Listener.dll
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-06 01:38:35Z INFO ConfigurationStore] binPath: /home/ubuntu/assignment2-yixianLu/actions-runner/bin
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-06 01:38:35Z INFO ConfigurationStore] RootFolder: /home/ubuntu/assignment2-yixianLu/actions-runner
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-06 01:38:35Z INFO HostContext] Well known config file 'Runner': '/home/ubuntu/assignment2-yixianLu/actions-runner/.runner'
+[2020-11-06 01:38:35Z INFO ConfigurationStore] ConfigFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.runner
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-06 01:38:35Z INFO HostContext] Well known config file 'Credentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials'
+[2020-11-06 01:38:35Z INFO ConfigurationStore] CredFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-06 01:38:35Z INFO HostContext] Well known config file 'MigratedCredentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_migrated'
+[2020-11-06 01:38:35Z INFO ConfigurationStore] MigratedCredFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_migrated
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-06 01:38:35Z INFO HostContext] Well known config file 'Service': '/home/ubuntu/assignment2-yixianLu/actions-runner/.service'
+[2020-11-06 01:38:35Z INFO ConfigurationStore] ServiceConfigFilePath: /home/ubuntu/assignment2-yixianLu/actions-runner/.service
+[2020-11-06 01:38:35Z INFO CommandSettings] Flag 'help': 'False'
+[2020-11-06 01:38:35Z INFO CommandSettings] Flag 'version': 'False'
+[2020-11-06 01:38:35Z INFO CommandSettings] Flag 'commit': 'False'
+[2020-11-06 01:38:35Z INFO CommandSettings] Command 'configure': 'False'
+[2020-11-06 01:38:35Z INFO CommandSettings] Command 'remove': 'False'
+[2020-11-06 01:38:35Z INFO CommandSettings] Command 'warmup': 'False'
+[2020-11-06 01:38:35Z INFO ConfigurationManager] LoadSettings
+[2020-11-06 01:38:35Z INFO ConfigurationStore] IsConfigured()
+[2020-11-06 01:38:35Z INFO ConfigurationStore] IsConfigured: True
+[2020-11-06 01:38:35Z INFO ConfigurationManager] Is configured: True
+[2020-11-06 01:38:35Z INFO ConfigurationStore] Read setting file: 319 chars
+[2020-11-06 01:38:35Z INFO ConfigurationManager] Settings Loaded
+[2020-11-06 01:38:35Z INFO ConfigurationStore] IsServiceConfigured()
+[2020-11-06 01:38:35Z INFO ConfigurationStore] IsServiceConfigured: False
+[2020-11-06 01:38:35Z INFO CommandSettings] Command 'run': 'True'
+[2020-11-06 01:38:35Z INFO ConfigurationStore] IsConfigured()
+[2020-11-06 01:38:35Z INFO ConfigurationStore] IsConfigured: True
+[2020-11-06 01:38:35Z INFO ConfigurationManager] Is configured: True
+[2020-11-06 01:38:35Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2020-11-06 01:38:35Z INFO Runner] Set runner startup type - Manual
+[2020-11-06 01:38:35Z INFO CommandSettings] Flag 'once': 'False'
+[2020-11-06 01:38:35Z INFO Runner] RunAsync
+[2020-11-06 01:38:35Z INFO ConfigurationManager] LoadSettings
+[2020-11-06 01:38:35Z INFO ConfigurationStore] IsConfigured()
+[2020-11-06 01:38:35Z INFO ConfigurationStore] IsConfigured: True
+[2020-11-06 01:38:35Z INFO ConfigurationManager] Is configured: True
+[2020-11-06 01:38:35Z INFO ConfigurationManager] Settings Loaded
+[2020-11-06 01:38:35Z INFO MessageListener] {
+  "AgentId": 2,
+  "AgentName": "cmput401-assignment2_yxl",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelines.actions.githubusercontent.com/SlfxfpiHaA8t9bO3tik5wAhm7FVPtFt8fHahD0YDOzro3EeyeD",
+  "GitHubUrl": "https://github.com/UAlberta-CMPUT401/assignment2-yixianLu",
+  "WorkFolder": "_work"
+}
+[2020-11-06 01:38:35Z INFO MessageListener] Loading Credentials
+[2020-11-06 01:38:35Z INFO ConfigurationStore] HasCredentials()
+[2020-11-06 01:38:35Z INFO ConfigurationStore] stored True
+[2020-11-06 01:38:35Z INFO CredentialManager] GetCredentialProvider
+[2020-11-06 01:38:35Z INFO CredentialManager] Creating type OAuth
+[2020-11-06 01:38:35Z INFO CredentialManager] Creating credential type: OAuth
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Bin': '/home/ubuntu/assignment2-yixianLu/actions-runner/bin'
+[2020-11-06 01:38:35Z INFO HostContext] Well known directory 'Root': '/home/ubuntu/assignment2-yixianLu/actions-runner'
+[2020-11-06 01:38:35Z INFO HostContext] Well known config file 'RSACredentials': '/home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams'
+[2020-11-06 01:38:35Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams
+[2020-11-06 01:38:35Z INFO MessageListener] Attempt to create session.
+[2020-11-06 01:38:35Z INFO MessageListener] Connecting to the Runner Server...
+[2020-11-06 01:38:35Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2020-11-06 01:38:35Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-06 01:38:36Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2020-11-06 01:38:36Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-06 01:38:36Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2020-11-06 01:38:36Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-06 01:38:36Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-06 01:38:36Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-06 01:38:36Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-06 01:38:36Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-06 01:38:36Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-06 01:38:36Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2020-11-06 01:38:37Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2020-11-06 01:38:37Z INFO MessageListener] VssConnection created
+[2020-11-06 01:38:37Z INFO Terminal] WRITE LINE: 
+[2020-11-06 01:38:37Z INFO Terminal] WRITE LINE: 
+[2020-11-06 01:38:37Z WARN GitHubActionsService] Authentication failed with status code 401.
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: 30ecb4db-e13d-4a6c-9d33-14c5a1e7373b
+ActivityId: b4f1fcdf-75f4-493b-9a7c-b442fcf6e06b
+X-TFS-Session: 136a0dc1-cd6a-4a3e-a617-267794146df3
+X-VSS-E2EID: 74c3168a-4199-4a7b-877a-a7a415568f19
+X-VSS-SenderDeploymentId: 13a19993-c6bc-326c-afb4-32c5519f46f0
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-MSEdge-Ref: Ref A: BB12CE8B17D54DC4B97D3B355217F00B Ref B: WSTEDGE0610 Ref C: 2020-11-06T01:38:37Z
+Date: Fri, 06 Nov 2020 01:38:37 GMT
+
+[2020-11-06 01:38:37Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams
+[2020-11-06 01:38:37Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ubuntu/assignment2-yixianLu/actions-runner/.credentials_rsaparams
+[2020-11-06 01:38:37Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2020-11-06 01:38:37Z INFO MessageListener] Session created.
+[2020-11-06 01:38:37Z INFO Terminal] WRITE LINE: 2020-11-06 01:38:37Z: Listening for Jobs
+[2020-11-06 01:38:37Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2020-11-06 01:41:07Z INFO Terminal] WRITE LINE: Exiting...
+[2020-11-06 01:41:07Z INFO ConfigurationStore] IsServiceConfigured()
+[2020-11-06 01:41:07Z INFO ConfigurationStore] IsServiceConfigured: False
+[2020-11-06 01:41:07Z INFO HostContext] Runner will be shutdown for UserCancelled
+[2020-11-06 01:41:07Z WARN GitHubActionsService] GET request to https://pipelines.actions.githubusercontent.com/SlfxfpiHaA8t9bO3tik5wAhm7FVPtFt8fHahD0YDOzro3EeyeD/_apis/distributedtask/pools/1/messages?sessionId=b4324781-2500-464d-8e4e-14000782a370 has been cancelled.
+[2020-11-06 01:41:07Z INFO MessageListener] Get next message has been cancelled.
+[2020-11-06 01:41:07Z INFO JobDispatcher] Shutting down JobDispatcher. Make sure all WorkerDispatcher has finished.
+[2020-11-06 01:41:08Z INFO Listener] Runner execution been cancelled.
