@@ -19,9 +19,7 @@
 
 name: Build Pipeline
 ​
-on:
-    push:
-        branches: yixianLu-patch-2
+on: [push]
 ​
 jobs:
     build:
