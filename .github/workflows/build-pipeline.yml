@@ -1,48 +1,60 @@
-# name: Build Pipeline
-# # This workflow is triggered on pushes to the repository.
-# on: [push]
-
-# jobs:
-#   build:
-#     name: Pytest & Flake8
-#     runs-on: self-hosted
-#     container: kalvin1234/myers-triangle
-#     steps:
-#       - name: Pull Repository
-#         uses: actions/checkout@v2
-#       - name: Install Requirements
-#         run: pip3 install -r requirements.txt
-#       - name: Pytest
-#         run: pytest test_foo.py test_selenium.py
-#       - name: Flake8
-#         run: flake8
-
 name: Build Pipeline
-​
+# This workflow is triggered on pushes to the repository.
 on: [push]
-​
+
 jobs:
-    build:
-        name: Pytest & Selenium
-        runs-on: self-hosted
-        container: kalvin1234/myers-triangle
-        steps:
-            - name: Pull Repository
-              uses: actions/checkout@v2
-            - name: Install Chrome
-              run: |
-                apt-get update
-                curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o /chrome.deb
-                dpkg -i /chrome.deb || apt-get install -yf
-                rm /chrome.deb
-            - name: Install Chrome Driver
-              run: |
-                apt-get install -yqq unzip
-                wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
-                unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
-            - name: Install Requirements
-              run: pip3 install -r requirements.txt
-            - name: Flake8
-              run: flake8      
-            - name: Pytest
-              run: pytest --cov=.
+  build:
+    name: Pytest & Flake8
+    runs-on: self-hosted
+    container: kalvin1234/myers-triangle
+    steps:
+      - name: Pull Repository
+        uses: actions/checkout@v2
+      - name: Install Chrome
+        run: |
+          apt-get update
+          curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o /chrome.deb
+          dpkg -i /chrome.deb || apt-get install -yf
+          rm /chrome.deb
+      - name: Install Chrome Driver
+        run: |
+          apt-get install -yqq unzip
+          wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
+          unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/        
+      - name: Install Requirements
+        run: pip3 install -r requirements.txt
+      - name: Pytest
+        # run: pytest test_foo.py test_selenium.py
+        run: pytest --cov=.
+      - name: Flake8
+        run: flake8
+
+# name: Build Pipeline
+# ​
+# on: [push]
+# ​
+# jobs:
+#     build:
+#         name: Pytest & Selenium
+#         runs-on: self-hosted
+#         container: kalvin1234/myers-triangle
+#         steps:
+#             - name: Pull Repository
+#               uses: actions/checkout@v2
+            # - name: Install Chrome
+            #   run: |
+            #     apt-get update
+            #     curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o /chrome.deb
+            #     dpkg -i /chrome.deb || apt-get install -yf
+            #     rm /chrome.deb
+            # - name: Install Chrome Driver
+            #   run: |
+            #     apt-get install -yqq unzip
+            #     wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
+            #     unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
+#             - name: Install Requirements
+#               run: pip3 install -r requirements.txt
+#             - name: Flake8
+#               run: flake8      
+#             - name: Pytest
+#               run: pytest --cov=.
